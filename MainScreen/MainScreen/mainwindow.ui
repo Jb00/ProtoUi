@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1172</width>
+    <height>648</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="map">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>70</y>
+      <width>941</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>970</x>
+      <y>60</y>
+      <width>157</width>
+      <height>280</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>Zoom In</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>Zoom Out</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="text">
+        <string>PushButton</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkBox">
+       <property name="text">
+        <string>Acute care</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkBox_2">
+       <property name="text">
+        <string>Complex continuing</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkBox_4">
+       <property name="text">
+        <string>Long term care</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>View</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBox">
+         <item>
+          <property name="text">
+           <string>All</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Hospital</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Nursing Home</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_5">
+       <property name="text">
+        <string>Open Facility</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="text">
+        <string>Waiting List Facility</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1172</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <widget class="QMenu" name="menuControl_Panel">
+     <property name="title">
+      <string>Control Panel</string>
+     </property>
+     <addaction name="actionOn"/>
+     <addaction name="separator"/>
+     <addaction name="actionOff"/>
+    </widget>
+    <widget class="QMenu" name="menuSearch">
+     <property name="title">
+      <string>Search</string>
+     </property>
+     <widget class="QMenu" name="menuAvailable_Beds">
+      <property name="title">
+       <string>Available Beds</string>
+      </property>
+      <addaction name="actionAcute_Care"/>
+      <addaction name="separator"/>
+      <addaction name="actionComplex_Continuing_Care"/>
+      <addaction name="separator"/>
+      <addaction name="actionLong_Term_Care"/>
+     </widget>
+     <addaction name="menuAvailable_Beds"/>
+    </widget>
+    <addaction name="menuControl_Panel"/>
+    <addaction name="separator"/>
+    <addaction name="menuSearch"/>
+    <addaction name="separator"/>
+    <addaction name="actionLogout"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <widget class="QMenu" name="menuFacility">
+     <property name="title">
+      <string>Facility</string>
+     </property>
+     <addaction name="actionHospital"/>
+     <addaction name="separator"/>
+     <addaction name="actionNursing_Home"/>
+    </widget>
+    <widget class="QMenu" name="menuZoom">
+     <property name="title">
+      <string>Zoom</string>
+     </property>
+     <addaction name="actionZoom_In"/>
+     <addaction name="separator"/>
+     <addaction name="actionZoom_Out"/>
+    </widget>
+    <addaction name="menuFacility"/>
+    <addaction name="separator"/>
+    <addaction name="actionFull_Screen"/>
+    <addaction name="separator"/>
+    <addaction name="menuZoom"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuView"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionHospital">
+   <property name="text">
+    <string>Hospital</string>
+   </property>
+  </action>
+  <action name="actionNursing_Home">
+   <property name="text">
+    <string>Nursing Home</string>
+   </property>
+  </action>
+  <action name="actionFull_Screen">
+   <property name="text">
+    <string>Full Screen</string>
+   </property>
+  </action>
+  <action name="actionZoom_In">
+   <property name="text">
+    <string>Zoom In</string>
+   </property>
+  </action>
+  <action name="actionZoom_Out">
+   <property name="text">
+    <string>Zoom Out</string>
+   </property>
+  </action>
+  <action name="actionOn">
+   <property name="text">
+    <string>On</string>
+   </property>
+  </action>
+  <action name="actionOff">
+   <property name="text">
+    <string>Off</string>
+   </property>
+  </action>
+  <action name="actionLogout">
+   <property name="text">
+    <string>Logout</string>
+   </property>
+  </action>
+  <action name="actionAcute_Care">
+   <property name="text">
+    <string>Acute Care</string>
+   </property>
+  </action>
+  <action name="actionComplex_Continuing_Care">
+   <property name="text">
+    <string>Complex Continuing Care</string>
+   </property>
+  </action>
+  <action name="actionLong_Term_Care">
+   <property name="text">
+    <string>Long Term Care</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
