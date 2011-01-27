@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Wed Jan 26 10:56:52 2011
+** Created: Thu Jan 27 13:51:04 2011
 **      by: Qt User Interface Compiler version 4.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -16,13 +16,13 @@
 #include <QtGui/QButtonGroup>
 #include <QtGui/QCheckBox>
 #include <QtGui/QComboBox>
-#include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
 #include <QtGui/QLabel>
 #include <QtGui/QMainWindow>
 #include <QtGui/QMenu>
 #include <QtGui/QMenuBar>
 #include <QtGui/QPushButton>
+#include <QtGui/QSpacerItem>
 #include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
 
@@ -46,6 +46,7 @@ public:
     QWidget *centralWidget;
     QLabel *map;
     QWidget *widget;
+    QVBoxLayout *verticalLayout_3;
     QVBoxLayout *verticalLayout;
     QPushButton *pushButton;
     QPushButton *pushButton_2;
@@ -53,10 +54,12 @@ public:
     QCheckBox *checkBox;
     QCheckBox *checkBox_2;
     QCheckBox *checkBox_4;
-    QHBoxLayout *horizontalLayout;
     QLabel *label;
     QComboBox *comboBox;
     QPushButton *pushButton_5;
+    QSpacerItem *verticalSpacer;
+    QVBoxLayout *verticalLayout_2;
+    QComboBox *comboBox_2;
     QPushButton *pushButton_4;
     QMenuBar *menuBar;
     QMenu *menuFile;
@@ -104,12 +107,15 @@ public:
         map->setGeometry(QRect(9, 70, 941, 521));
         widget = new QWidget(centralWidget);
         widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(970, 60, 157, 280));
-        verticalLayout = new QVBoxLayout(widget);
+        widget->setGeometry(QRect(970, 61, 158, 384));
+        verticalLayout_3 = new QVBoxLayout(widget);
+        verticalLayout_3->setSpacing(6);
+        verticalLayout_3->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
+        verticalLayout_3->setContentsMargins(0, 0, 0, 0);
+        verticalLayout = new QVBoxLayout();
         verticalLayout->setSpacing(6);
-        verticalLayout->setContentsMargins(11, 11, 11, 11);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
         pushButton = new QPushButton(widget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
 
@@ -140,31 +146,43 @@ public:
 
         verticalLayout->addWidget(checkBox_4);
 
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setSpacing(6);
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         label = new QLabel(widget);
         label->setObjectName(QString::fromUtf8("label"));
 
-        horizontalLayout->addWidget(label);
+        verticalLayout->addWidget(label);
 
         comboBox = new QComboBox(widget);
         comboBox->setObjectName(QString::fromUtf8("comboBox"));
 
-        horizontalLayout->addWidget(comboBox);
-
-
-        verticalLayout->addLayout(horizontalLayout);
+        verticalLayout->addWidget(comboBox);
 
         pushButton_5 = new QPushButton(widget);
         pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
 
         verticalLayout->addWidget(pushButton_5);
 
+
+        verticalLayout_3->addLayout(verticalLayout);
+
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_3->addItem(verticalSpacer);
+
+        verticalLayout_2 = new QVBoxLayout();
+        verticalLayout_2->setSpacing(6);
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
+        comboBox_2 = new QComboBox(widget);
+        comboBox_2->setObjectName(QString::fromUtf8("comboBox_2"));
+
+        verticalLayout_2->addWidget(comboBox_2);
+
         pushButton_4 = new QPushButton(widget);
         pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
 
-        verticalLayout->addWidget(pushButton_4);
+        verticalLayout_2->addWidget(pushButton_4);
+
+
+        verticalLayout_3->addLayout(verticalLayout_2);
 
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
@@ -253,6 +271,15 @@ public:
          << QApplication::translate("MainWindow", "Nursing Home", 0, QApplication::UnicodeUTF8)
         );
         pushButton_5->setText(QApplication::translate("MainWindow", "Open Facility", 0, QApplication::UnicodeUTF8));
+        comboBox_2->clear();
+        comboBox_2->insertItems(0, QStringList()
+         << QApplication::translate("MainWindow", "Eastern Counties", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MainWindow", "North Lanark", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MainWindow", "Ottawa Centre", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MainWindow", "Ottawa East", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MainWindow", "Ottawa West", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MainWindow", "Renfrew County", 0, QApplication::UnicodeUTF8)
+        );
         pushButton_4->setText(QApplication::translate("MainWindow", "Waiting List Facility", 0, QApplication::UnicodeUTF8));
         menuFile->setTitle(QApplication::translate("MainWindow", "File", 0, QApplication::UnicodeUTF8));
         menuControl_Panel->setTitle(QApplication::translate("MainWindow", "Control Panel", 0, QApplication::UnicodeUTF8));
